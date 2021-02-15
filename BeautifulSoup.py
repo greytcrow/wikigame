@@ -48,6 +48,7 @@ while(current_page.url != finish_line.url):
                       ),
     ]
     answers = inquirer.prompt(questions, theme=GreenPassion())
+    os.system('clear')
     interm = ("https://fr.wikipedia.org/wiki/" +
               answers['link'].replace(" ", "_"))
     current_page = urllib.request.urlopen(interm)
